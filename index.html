@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="/assets/javascript/game.js"></script>
 </head>
+
 <div class="jumbotron">
     <h1 class="display-4">Legends Gone</h1>
     <p class="lead">This is a music-themed version of the game Hangman. You will be guessing names of the timeless hits by music legends who passed in the last couple of decades. Let's keep them alive!</p>
@@ -16,6 +18,20 @@
       <a class="btn btn-primary btn-lg" href="#" role="button">Let's go</a>
     </p>
   </div>
+
+  <div class="container px-lg-5">
+    <div class="row mx-lg-n5">
+      <div class="col py-3 px-lg-5 border bg-light">
+        <p id="currentWord">Current word</p>
+        <p id=wordblock></p>
+        <p id=remainingGuesses></p>
+      </div>
+     
+      <div class="col py-3 px-lg-5 border bg-light"></div>
+    </div>
+  </div>
+
+
 <body>
     
 </body>
