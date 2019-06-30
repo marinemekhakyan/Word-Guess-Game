@@ -6,29 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="/assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <div class="jumbotron">
     <h1 class="display-4">Legends Gone</h1>
     <p class="lead">This is a music-themed version of the game Hangman. You will be guessing names of the timeless hits by music legends who passed in the last couple of decades. Let's keep them alive!</p>
     <hr class="my-4">
-    <p>Click "Let's Go" to start playing</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Let's go</a>
-    </p>
+    <p>Press any key to start playing</p>
+    <p class="lead"></p>
   </div>
 
+  
   <div class="container px-lg-5">
     <div class="row mx-lg-n5">
       <div class="col py-3 px-lg-5 border bg-light">
-        <p id="currentWord">Current word</p>
-        <p id=wordBlock></p>
-        <p id="myLives"></p>
-        <p>Remaining Number of Guesses</p>
-        <p id=remainingGuesses></p>
-        <p>Guessed Letters</p>
-        <p id=></p>
+        <p>Guess the song</p>
+        <p id="word"></p>
+        <p id="remaining-guesses-text">Remaining Guesses</p>
+        <p id="wrongGuesses">Guessed Letters</p>
+        <p id="wins-text">Wins</p>
+        <p id="losses-text">Losses</p>
       </div>
      
       <div class="col py-3 px-lg-5 border bg-light"></div>
