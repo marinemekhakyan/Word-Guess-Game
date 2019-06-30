@@ -63,26 +63,33 @@ let artists;            //Topics
 
 // OnKeyUp Function
     document.onkeyup = function(event) {
-      let guess = (this.innerHTML);
+      guess = (this.innerHTML);
       this.setAttribute("class", "active");
-      this.onclick = null;
+      this.onkeyup = null;
       for (var i = 0; i < word.length; i++) {
-        if (word[i] === geuss) {
-          geusses[i].innerHTML = geuss;
+        if (word[i] === guess) {
+          guesses[i].innerHTML = guess;
           counter += 1;
         } 
       }
-      var j = (word.indexOf(geuss));
-      if (j === -1) {
+      let i = (word.indexOf(guess));
+      if (i === -1) {
         lives -= 1;
         comments();
-        animate();
       } else {
         comments();
       }
     }
-  }
   
+  // Play
+  play = function () {
+    categories = [
+        ["A little less conversation"],
+        ["Valerie"],
+        ["We are the Champions"],
+        ["Billie Jean"]
+    ];
+
 
 function newFunction() {
     return event.key;
