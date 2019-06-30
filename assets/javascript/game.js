@@ -1,16 +1,15 @@
 let letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 
-    // Creating variables to hold the number of wins, losses, and ties. They start at 0.
-    let wins = 0;
+let wins = 0;
     let losses = 0;
     let correctGuesses;
     let wrongGuesses;
 
-    // Create variables that hold references to the places in the HTML where we want to display things.
     let word = document.getElementById("word");
     let remainingGuesses = document.getElementById("remaining-guesses-text");
     let winsText = document.getElementById("wins-text");
     let lossesText = document.getElementById("losses-text");
+
 
     function initializeGame() {
       word = ["A little less conversation", "Valerie", "We are the Champions", "Billie Jean"];
@@ -60,122 +59,25 @@ let letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
                     initializeGame();
     
 
-// $(document).ready(function() {
-// })
-//  let userChoice = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+// Initial Pseudocode
 
-// let artists;            //Topics
-//   let chosenArtist;     // Current artist 
-//   let word;            // Selected word
-//   let guess;           // Guess
-//   let guesses = [ ];    // Stored guesses
-//   let lives;           // Lives
-//   let counter;         // Count correct guesses
-//   let space;            // Number of spaces in word '-'
-
-//   // Get elements
-//   let displayLives = document.getElementById("mylives");
-//   let displayArtist = document.getElementById("disArtist");
-//     let userChoice = event.key;
-
-//     let chosenArtist = function () {
-//         if (chosenCategory === categories[0]) {
-//           catagoryName.innerHTML = "Elvis Presley";
-//         } else if (chosenCategory === categories[1]) {
-//           catagoryName.innerHTML = "Amy Whinehouse";
-//         } else if (chosenCategory === categories[2]) {
-//           catagoryName.innerHTML = "Freddie Mercury"; 
-//         } else if (chosenCategory === categories[3]) {
-//             catagoryName.innerHTML = "Michael Jackson";
-//           }
-//       }
-
-//       result = function () {
-//         wordBlock = document.getElementById('wordBlock');
-//         correct = document.createElement('ul');
-    
-//         for (var i = 0; i < word.length; i++) {
-//           correct.setAttribute('id', 'my-word');
-//           guess = document.createElement('li');
-//           guess.setAttribute('class', 'guess');
-//           if (word[i] === "-") {
-//             guess.innerHTML = "-";
-//             space = 1;
-//           } else {
-//             guess.innerHTML = "_";
-//           }
-//           guesses.push(guess);
-//       wordHolder.appendChild(correct);
-//       correct.appendChild(guess);
-//     }
-//   }
-
-//   // Show lives
-//   comments = function () {
-//     showLives.innerHTML = lives + " lives left";
-//     if (lives < 1) {
-//       showLives.innerHTML = "Try Again!";
-//     }
-//     for (var i = 0; i < guesses.length; i++) {
-//       if (counter + space === guesses.length) {
-//         showLives.innerHTML = "Nice job!";
-//       }
-//     }
-//   }
-
-// // OnKeyUp Function
-//     document.onkeyup = function(event) {
-//       guess = (this.innerHTML);
-//       this.setAttribute("class", "active");
-//       this.onkeyup = null;
-//       for (var i = 0; i < word.length; i++) {
-//         if (word[i] === guess) {
-//           guesses[i].innerHTML = guess;
-//           counter += 1;
-//         } 
-//       }
-//       let i = (word.indexOf(guess));
-//       if (i === -1) {
-//         lives -= 1;
-//         comments();
-//       } else {
-//         comments();
-//       }
-//     }
-  
-//   // Play
-//   play = function () {
-//     categories = [
-//         ["A little less conversation"],
-//         ["Valerie"],
-//         ["We are the Champions"],
-//         ["Billie Jean"]
-//     ];
-
-//     chosenCategory = categories[Math.floor(Math.random() * categories.length)];
-//     word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
-//     word = word.replace(/\s/g, "-");
-//     console.log(word);
-//     buttons();
-
-//     guesses = [ ];
-//     lives = 10;
-//     counter = 0;
-//     space = 0;
-//     result();
-//     comments();
-//     chosenArtist();
-//     canvas();
-// }
-//     play();
-
-//     //Reset
-
-//     document.getElementById('reset').onclick = function() {
-//         correct.parentNode.removeChild(correct);
-//         letters.parentNode.removeChild(letters);
-//         showClue.innerHTML = "";
-//         context.clearRect(0, 0, 400, 400);
-//         play();
-//       }
-    
+// Choose theme "Legends Gone" and include song names by famous artists who passed.
+// Link mp3 files and artist images to play and display once the song is guessed correctly.
+// For styling use Bootstrap (Jumbotron, image cards, grid). Also link to style.css file.
+// Display text with description, number of guesses, wins
+// User needs to guess the name of the song by typing any of the letters in CharCode.
+// If the letter typed fits any of the letters in the song name, the letter appears on its corresponding word position.
+// Use .push("_") to display underscore instead of the song name when the user is guessing. 
+// Use .join(" ") to bring the letters together when the user gets the name of the song right. 
+// if the typed letter is not in the current song name, it appears under "Guessed Letters" and the number of allowed guesses gets decremented by 1.
+// Wrong guessed letters are not typable anymore. 
+// Define the number of times user can type wrong letters. Limit that number to 10 and display the dynamic countdown.
+// When the number of allowed guesses reaches 0, the user loses. 
+// If the user guesses all letters correctly, the user wins and that song plays until user presses reset/play again.
+// When the user guesses the name of the song, the number of wins gets incremented by 1.
+// Create variables for guessed letters, counter, win and lose points.
+// Song names will be kept in an array.
+// Use for loops to loop through the arrays and assign the user choice to either correct or wrong.
+// Typed letters will be pulled from CharCode.
+// OnKeyUp event function will be used to grab user input and start the game.
+// CheckWin function will contain the conditional alerting "Win/Lose"
