@@ -1,6 +1,6 @@
 let letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 
-let wins = 0;
+    let wins = 0;
     let losses = 0;
     let correctGuesses;
     let wrongGuesses;
@@ -39,9 +39,15 @@ let wins = 0;
             }
             }
             
-        wordElement.innerHTML = correctGuesses.join(' ');
+        wordElement.innerHTML = correctGuesses.join('_');
             }
             }
+
+        winsText.textContent = "wins: " + wins;
+        lossesText.textContent = "losses: " + losses;
+        remainingGuesses.textContent = "You have: " + allowedGuesses + "left";
+        
+
 
             function checkWin() {
                 if (correctGuesses.indexOf('_') === -1) {
@@ -68,7 +74,7 @@ let wins = 0;
 // User needs to guess the name of the song by typing any of the letters in CharCode.
 // If the letter typed fits any of the letters in the song name, the letter appears on its corresponding word position.
 // Use .push("_") to display underscore instead of the song name when the user is guessing. 
-// Use .join(" ") to bring the letters together when the user gets the name of the song right. 
+// Use .join("_") to bring the letters together when the user gets the name of the song right. _ is to separate words in the song name.
 // if the typed letter is not in the current song name, it appears under "Guessed Letters" and the number of allowed guesses gets decremented by 1.
 // Wrong guessed letters are not typable anymore. 
 // Define the number of times user can type wrong letters. Limit that number to 10 and display the dynamic countdown.
